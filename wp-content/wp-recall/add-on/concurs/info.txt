@@ -1,0 +1,7 @@
+Name: Администрирование конкурсов;
+Version: 1.0;
+Description: Дополнение для Wp-Recall;
+Support Core: 10.0.0;
+Author: Кугаевская Евгения;
+Author Uri: https://vk.com/kuga_e_i;
+Add-on Uri: https://vk.com/kuga_e_i;

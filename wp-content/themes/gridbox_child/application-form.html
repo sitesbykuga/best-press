@@ -1,0 +1,434 @@
+<!-- Верстка формы подачи заявки -->
+<div class="container">
+	<div class="row">
+		<div class="col-2 col-hide"></div>
+		<div class="col-xl-4 col-md-6">
+			<p class="title-row">Название конкурса<span class="required-field">*</span></p></div>
+		<div class="col-xl-4 col-md-6 value-row">[select* cf7-concurs "Медиаперспектива" "Социальная реклама"]</div>
+		<div class="col-2 col-hide"></div>
+	</div>
+	<div class="row">
+		<div class="col-12 sub-title">Конкурсная работа</div>
+	</div>
+	<div class="row">
+		<div class="col-2 col-hide"></div>
+		<div class="col-xl-4 col-md-6">
+			<p class="title-row">Название работы<span class="required-field">*</span></p></div>
+		<div class="col-xl-4 col-md-6 value-row">[text* your-subject]</div>
+		<div class="col-2 col-hide"></div>
+	</div>
+	[group group-nomin-media]
+	<div class="row">
+		<div class="col-2 col-hide"></div>
+		<div class="col-xl-4 col-md-6">
+			<p class="title-row">Номинация<span class="required-field">*</span></p></div>
+		<div class="col-xl-4 col-md-6 value-row">[select* cf7-nomination-midia "Стихотворение" "Статья" "Фотография" "Плакат (рисунок)" "Плакат (графический дизайн)" "Видеоролик"]</div>
+		<div class="col-2 col-hide"></div>
+	</div>
+	<div class="row">
+		<div class="col-2 col-hide"></div>
+		<div class="col-xl-4 col-md-6">
+			<p class="title-row">Тема<span class="required-field">*</span></p></p></div>
+		<div class="col-xl-4 col-md-6 value-row">[select* cf7-theme-media "Живи ярко!" "Свобода помогать" "Эколог и Я" "СемьЯ" "Свободная тема"]</div>
+		<div class="col-2 col-hide"></div>
+	</div>
+		[group group-free-theme]
+		<div class="row">
+			<div class="col-2 col-hide"></div>
+			<div class="col-xl-4 col-md-6">
+				<p class="title-row">Наименование свободной темы</p></div>
+			<div class="col-xl-4 col-md-6 value-row">[text cf7-free-theme] </div>
+		</div>
+		[/group]
+
+		[group group-poem]
+		<div class="row">
+			<div class="col-2 col-hide"></div>
+			<div class="col-xl-4 col-md-6">
+				<p class="title-row">Текст стихотворения</p>
+				<p class="subtitle-row">Максимальный размер файла: 10Мб</p>
+				<p class="subtitle-row">Допустимый тип файла: *.doc, *.docx</p></div>
+				<div class="col-xl-4 col-md-6 value-row">[file cf7-text-poem filetypes:doc|docx limit:10mb]</div>
+				<div class="col-2 col-hide"></div>
+			</div>
+			<div class="row">
+				<div class="col-2 col-hide"></div>
+				<div class="col-xl-4 col-md-6">
+					<p class="title-row">Музыкальное сопровождение</p>
+					<p class="subtitle-row">Мелодия к песне записываются отдельным файлом в любом формате. Если участник играет на каком-либо музыкальном инструменте, он может записать на видео или диктофон свое исполнение песни, может только напеть мелодию без музыкального сопровождения.</p>
+					<p class="subtitle-row">Максимальный размер файла: 10Мб</p>
+					<p class="subtitle-row">Допустимый тип файла: *.mp3, *.mp4, *.zip, *.rar</p></div>
+				<div class="col-xl-4 col-md-6 value-row">[file cf7-single-poem filetypes:mp3|mp4|zip|rar limit:10mb]</div>
+				<div class="col-2 col-hide"></div>
+			</div>
+		[/group]
+
+		[group group-article]
+		<div class="row">
+			<div class="col-2 col-hide"></div>
+			<div class="col-xl-4 col-md-6">
+				<p class="title-row">Текст статьи с иллюстрациями</p>
+				<p class="subtitle-row">Максимальный размер файла: 10Мб</p>
+				<p class="subtitle-row">Допустимый тип файла: *.doc, *.docx</p></div>
+			<div class="col-xl-4 col-md-6 value-row">[file cf7-text-image-article filetypes:doc|docx limit:10mb]</div>
+			<div class="col-2 col-hide"></div>
+		</div>
+		<div class="row">
+			<div class="col-2 col-hide"></div>
+			<div class="col-xl-4 col-md-6">
+				<p class="title-row">Текст статьи</p>
+				<p class="subtitle-row">Максимальный размер файла: 10Мб</p>
+				<p class="subtitle-row">Допустимый тип файла: *.doc, *.docx</p></div>
+			<div class="col-xl-4 col-md-6 value-row">[file cf7-text-article filetypes:doc|docx limit:10mb]</div>
+			<div class="col-2 col-hide"></div>
+		</div>
+		<div class="row">
+			<div class="col-2 col-hide"></div>
+			<div class="col-xl-4 col-md-6">
+				<p class="title-row">Иллюстрации к статье</p>
+				<p class="subtitle-row">Максимальный размер файла: 10Мб</p>
+				<p class="subtitle-row">Допустимый тип файла: *.jpg, *.jpeg, *.zip, *.rar</p></div>
+			<div class="col-xl-4 col-md-6 value-row">[file cf7-image-article filetypes:jpg|jpeg|zip|rar limit:10mb]</div>
+			<div class="col-2 col-hide"></div>
+		</div>
+		[/group]
+
+		[group group-file]
+		<div class="row">
+			<div class="col-2 col-hide"></div>
+			<div class="col-xl-4 col-md-6">
+				<p class="title-row">Файл</p>
+				<p class="subtitle-row">Максимальный размер файла: 10Мб</p></div>
+			<div class="col-xl-4 col-md-6 value-row">[file cf7-file limit:10mb]</div>
+			<div class="col-2 col-hide"></div>
+		</div>
+		[/group]
+
+		[group group-video]
+		<div class="row">
+			<div class="col-2 col-hide"></div>
+			<div class="col-xl-4 col-md-6">
+				<p class="title-row">Видео</p>
+				<p class="subtitle-row">Максимальный размер файла: 100Мб</p></div>
+			<div class="col-xl-4 col-md-6 value-row">[file cf7-video-file limit:100mb]</div>
+			<div class="col-2 col-hide"></div>
+		</div>
+		[/group]
+	[/group]
+
+	[group group-nomin-soc-rekl]
+	<div class="row">
+		<div class="col-2 col-hide"></div>
+		<div class="col-xl-4 col-md-6">
+			<p class="title-row">Номинация<span class="required-field">*</span></p></div>
+		<div class="col-xl-4 col-md-6 value-row">[select* cf7-nomination-soc-rekl "Статья" "Фотография" "Плакат (рисунок)" "Плакат (графический дизайн)" "Видеоролик"]</div>
+		<div class="col-2 col-hide"></div>
+	</div>
+	<div class="row">
+		<div class="col-2 col-hide"></div>
+		<div class="col-xl-4 col-md-6">
+			<p class="title-row">Тема<span class="required-field">*</span></p></p></div>
+		<div class="col-xl-4 col-md-6 value-row">[select* cf7-theme-soc-rekl "Живи ярко!" "Свобода помогать" "СемьЯ" "Я выбираю..." "Живая планета" "Мир без границ" "Калейдоскоп талантов" "Современные технологии" "Свободная тема"]</div>
+		<div class="col-2 col-hide"></div>
+	</div>
+			[group group-free-theme-soc]
+		<div class="row">
+			<div class="col-2 col-hide"></div>
+			<div class="col-xl-4 col-md-6">
+				<p class="title-row">Наименование свободной темы</p></div>
+			<div class="col-xl-4 col-md-6 value-row">[text cf7-free-theme-soc] </div>
+		</div>
+		[/group]
+
+		[group group-poem-soc]
+		<div class="row">
+			<div class="col-2 col-hide"></div>
+			<div class="col-xl-4 col-md-6">
+				<p class="title-row">Текст стихотворения</p>
+				<p class="subtitle-row">Максимальный размер файла: 10Мб</p>
+				<p class="subtitle-row">Допустимый тип файла: *.doc, *.docx</p></div>
+				<div class="col-xl-4 col-md-6 value-row">[file cf7-text-poem-soc filetypes:doc|docx limit:10mb]</div>
+				<div class="col-2 col-hide"></div>
+			</div>
+			<div class="row">
+				<div class="col-2 col-hide"></div>
+				<div class="col-xl-4 col-md-6">
+					<p class="title-row">Музыкальное сопровождение</p>
+					<p class="subtitle-row">Мелодия к песне записываются отдельным файлом в любом формате. Если участник играет на каком-либо музыкальном инструменте, он может записать на видео или диктофон свое исполнение песни, может только напеть мелодию без музыкального сопровождения.</p>
+					<p class="subtitle-row">Максимальный размер файла: 10Мб</p>
+					<p class="subtitle-row">Допустимый тип файла: *.mp3, *.mp4, *.zip, *.rar</p></div>
+				<div class="col-xl-4 col-md-6 value-row">[file cf7-single-poem-soc filetypes:mp3|mp4|zip|rar limit:10mb]</div>
+				<div class="col-2 col-hide"></div>
+			</div>
+		[/group]
+
+		[group group-article-soc]
+		<div class="row">
+			<div class="col-2 col-hide"></div>
+			<div class="col-xl-4 col-md-6">
+				<p class="title-row">Текст статьи с иллюстрациями</p>
+				<p class="subtitle-row">Максимальный размер файла: 10Мб</p>
+				<p class="subtitle-row">Допустимый тип файла: *.doc, *.docx</p></div>
+			<div class="col-xl-4 col-md-6 value-row">[file cf7-text-image-article-soc filetypes:doc|docx limit:10mb]</div>
+			<div class="col-2 col-hide"></div>
+		</div>
+		<div class="row">
+			<div class="col-2 col-hide"></div>
+			<div class="col-xl-4 col-md-6">
+				<p class="title-row">Текст статьи</p>
+				<p class="subtitle-row">Максимальный размер файла: 10Мб</p>
+				<p class="subtitle-row">Допустимый тип файла: *.doc, *.docx</p></div>
+			<div class="col-xl-4 col-md-6 value-row">[file cf7-text-article-soc filetypes:doc|docx limit:10mb]</div>
+			<div class="col-2 col-hide"></div>
+		</div>
+		<div class="row">
+			<div class="col-2 col-hide"></div>
+			<div class="col-xl-4 col-md-6">
+				<p class="title-row">Иллюстрации к статье</p>
+				<p class="subtitle-row">Максимальный размер файла: 10Мб</p>
+				<p class="subtitle-row">Допустимый тип файла: *.jpg, *.jpeg, *.zip, *.rar</p></div>
+			<div class="col-xl-4 col-md-6 value-row">[file cf7-image-article-soc filetypes:jpg|jpeg|zip|rar limit:10mb]</div>
+			<div class="col-2 col-hide"></div>
+		</div>
+		[/group]
+
+		[group group-file-soc]
+		<div class="row">
+			<div class="col-2 col-hide"></div>
+			<div class="col-xl-4 col-md-6">
+				<p class="title-row">Файл</p>
+				<p class="subtitle-row">Максимальный размер файла: 10Мб</p></div>
+			<div class="col-xl-4 col-md-6 value-row">[file cf7-file-soc limit:10mb]</div>
+			<div class="col-2 col-hide"></div>
+		</div>
+		[/group]
+
+		[group group-video-soc]
+		<div class="row">
+			<div class="col-2 col-hide"></div>
+			<div class="col-xl-4 col-md-6">
+				<p class="title-row">Видео</p>
+				<p class="subtitle-row">Максимальный размер файла: 100Мб</p></div>
+			<div class="col-xl-4 col-md-6 value-row">[file cf7-video-file-soc limit:100mb]</div>
+			<div class="col-2 col-hide"></div>
+		</div>
+		[/group]
+	[/group]
+
+	
+
+	<div class="row">
+		<div class="col-12 sub-title">Информация об участнике</div>
+	</div>
+
+	<div class="row">
+		<div class="col-2 col-hide"></div>
+		<div class="col-xl-4 col-md-6">
+			<p class="title-row">Фамилия<span class="required-field">*</span></p></div>
+		<div class="col-xl-4 col-md-6 value-row">[text* your-name]</div>
+		<div class="col-2 col-hide"></div>
+	</div>
+	<div class="row">
+		<div class="col-2 col-hide"></div>
+		<div class="col-xl-4 col-md-6">
+			<p class="title-row">Имя<span class="required-field">*</span></p></div>
+		<div class="col-xl-4 col-md-6 value-row">[text* cf7-name-party]</div>
+		<div class="col-2 col-hide"></div>
+	</div>
+	<div class="row">
+		<div class="col-2 col-hide"></div>
+		<div class="col-xl-4 col-md-6">
+			<p class="title-row">Отчество</p>
+			<p class="subtitle-row">при наличии</p></div>
+		<div class="col-xl-4 col-md-6 value-row">[text cf7-otchestvo-party]</div>
+		<div class="col-2 col-hide"></div>
+	</div>
+	<div class="row">
+		<div class="col-2 col-hide"></div>
+		<div class="col-xl-4 col-md-6">
+			<p class="title-row">Дата рождения<span class="required-field">*</span></p></div>
+		<div class="col-xl-4 col-md-6 value-row">[date* cf7-birthday]</div>
+		<div class="col-2 col-hide"></div>
+	</div>
+	<div class="row">
+		<div class="col-2 col-hide"></div>
+		<div class="col-xl-4 col-md-6">
+			<p class="title-row">Контактный телефон</p></div>
+		<div class="col-xl-4 col-md-6 value-row">[tel cf7-tel-party]</div>
+		<div class="col-2 col-hide"></div>
+	</div>
+	<div class="row">
+		<div class="col-2 col-hide"></div>
+		<div class="col-xl-4 col-md-6">
+			<p class="title-row">Электронная почта</p></div>
+		<div class="col-xl-4 col-md-6 value-row">[email your-email]</div>
+		<div class="col-2 col-hide"></div>
+	</div>
+	<div class="row">
+		<div class="col-2 col-hide"></div>
+		<div class="col-xl-4 col-md-6">
+			<p class="title-row">Ссылки на профили в социальных сетях</p></div>
+		<div class="col-xl-4 col-md-6 value-row">[textarea cf7-link-social]</div>
+		<div class="col-2 col-hide"></div>
+	</div>
+	<div class="row">
+		<div class="col-2 col-hide"></div>
+		<div class="col-xl-4 col-md-6">
+			<p class="title-row">Учебное заведение/место работы</p></div>
+		<div class="col-xl-4 col-md-6 value-row">[textarea cf7-activity-place]</div>
+		<div class="col-2 col-hide"></div>
+	</div>
+	<div class="row">
+		<div class="col-2 col-hide"></div>
+		<div class="col-xl-4 col-md-6">
+			<p class="title-row">Класс/курс/должность</p>
+			<p class="subtitle-row">Если в пункте "Учебное заведение/место работы" указана общеобразовательная организация, то необходимо указать номер класса с литерой (при наличии) <br>
+			Если в пункте "Учебное заведение/место работы" указана профессиональная образовательная организация или образовательная организация высшего образования, то необходимо указать номер курса <br>
+			Если в пункте "Учебное заведение/место работы" указано место работы участника, то необходимо указать должность</p></div>
+		<div class="col-xl-4 col-md-6 value-row">[text cf7-class]</div>
+		<div class="col-2 col-hide"></div>
+	</div>
+	<div class="row">
+		<div class="col-2 col-hide"></div>
+		<div class="col-xl-4 col-md-6">
+			<p class="title-row">Уровень образования</p></div><div class="col-xl-4 col-md-6 value-row">[select cf7-edu "учащийся" "студент" "основное общее" "среднее общее" "среднее профессиональное" "высшее"]</div>
+		<div class="col-2 col-hide"></div>
+	</div>
+	<div class="row">
+		<div class="col-2 col-hide"></div>
+		<div class="col-xl-4 col-md-6">
+			<p class="title-row">Интересы участника</p>
+			<p class="subtitle-row">Укажите хобби, увлечения, интересы участника</p></div>
+		<div class="col-xl-4 col-md-6 value-row">[textarea cf7-hobby]</div>
+		<div class="col-2 col-hide"></div>
+	</div>
+
+	<div class="row">
+		<div class="col-12 sub-title">Место проживания участника</div>
+	</div>
+
+	<div class="row">
+		<div class="col-2 col-hide"></div>
+		<div class="col-xl-4 col-md-6">
+			<p class="title-row">Регион<span class="required-field">*</span></p></div>
+		<div class="col-xl-4 col-md-6 value-row">[text* cf7-region]</div>
+		<div class="col-2 col-hide"></div>
+	</div>
+	<div class="row">
+		<div class="col-2 col-hide"></div>
+		<div class="col-xl-4 col-md-6">
+			<p class="title-row">Город/Муниципальный район<span class="required-field">*</span></p></div>
+		<div class="col-xl-4 col-md-6 value-row">[text* cf7-city]</div>
+		<div class="col-2 col-hide"></div>
+	</div>
+	<div class="row">
+		<div class="col-2 col-hide"></div>
+		<div class="col-xl-4 col-md-6">
+			<p class="title-row">Район города/населенный пункт<span class="required-field">*</span></p></div>
+		<div class="col-xl-4 col-md-6 value-row">[text* cf7-np]</div>
+		<div class="col-2 col-hide"></div>
+	</div>
+
+	<div class="row">
+		<div class="col-12 sub-title">Законный представитель</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-2 col-hide"></div>
+		<div class="col-xl-4 col-md-6">
+			<p class="title-row">Фамилия</p></div>
+		<div class="col-xl-4 col-md-6 value-row">[text cf7-second-name-pr]</div>
+		<div class="col-2 col-hide"></div>
+	</div>
+	<div class="row">
+		<div class="col-2 col-hide"></div>
+		<div class="col-xl-4 col-md-6">
+			<p class="title-row">Имя</p></div>
+		<div class="col-xl-4 col-md-6 value-row">[text cf7-name-pr]</div>
+		<div class="col-2 col-hide"></div>
+	</div>
+	<div class="row">
+		<div class="col-2 col-hide"></div>
+		<div class="col-xl-4 col-md-6">
+			<p class="title-row">Отчество</p>
+			<p class="subtitle-row">при наличии</p></div>
+		<div class="col-xl-4 col-md-6 value-row">[text cf7-otchestvo-pr]</div>
+		<div class="col-2 col-hide"></div>
+	</div>
+	<div class="row">
+		<div class="col-2 col-hide"></div>
+		<div class="col-xl-4 col-md-6">
+			<p class="title-row">Контактный телефон</p></div>
+		<div class="col-xl-4 col-md-6 value-row">[tel cf7-tel-pr]</div>
+		<div class="col-2 col-hide"></div>
+	</div>
+	<div class="row">
+		<div class="col-2 col-hide"></div>
+		<div class="col-xl-4 col-md-6">
+			<p class="title-row">Электронная почта</p></div>
+		<div class="col-xl-4 col-md-6 value-row">[email cf7-e-mail-pr]</div>
+		<div class="col-2 col-hide"></div>
+	</div>
+
+	<div class="row">
+		<div class="col-12 sub-title">Руководитель</div>
+	</div>
+
+	<div class="row">
+		<div class="col-2 col-hide"></div>
+		<div class="col-xl-4 col-md-6">
+			<p class="title-row">Фамилия</p></div>
+		<div class="col-xl-4 col-md-6 value-row">[text cf7-second-name-dir]</div>
+		<div class="col-2 col-hide"></div>
+	</div>
+	<div class="row">
+		<div class="col-2 col-hide"></div>
+		<div class="col-xl-4 col-md-6">
+			<p class="title-row">Имя</p></div>
+		<div class="col-xl-4 col-md-6 value-row">[text cf7-name-dir]</div>
+		<div class="col-2 col-hide"></div>
+	</div>
+	<div class="row">
+		<div class="col-2 col-hide"></div>
+		<div class="col-xl-4 col-md-6">
+			<p class="title-row">Отчество</p>
+			<p class="subtitle-row">при наличии</p></div>
+		<div class="col-xl-4 col-md-6 value-row">[text cf7-otchestvo-dir]</div>
+		<div class="col-2 col-hide"></div>
+	</div>
+	<div class="row">
+		<div class="col-2 col-hide"></div>
+		<div class="col-xl-4 col-md-6">
+			<p class="title-row">Должность</p></div>
+		<div class="col-xl-4 col-md-6 value-row">[text cf7-post-dir]</div>
+		<div class="col-2 col-hide"></div>
+	</div>
+	<div class="row">
+		<div class="col-2 col-hide"></div>
+		<div class="col-xl-4 col-md-6">
+			<p class="title-row">Контактный телефон</p></div>
+		<div class="col-xl-4 col-md-6 value-row">[tel cf7-tel-dir]</div>
+		<div class="col-2 col-hide"></div>
+	</div>
+	<div class="row">
+		<div class="col-2 col-hide"></div>
+		<div class="col-xl-4 col-md-6">
+			<p class="title-row">Электронная почта</p></div>
+		<div class="col-xl-4 col-md-6 value-row">[email cf7-e-mail-dir]</div>
+		<div class="col-2 col-hide"></div>
+	</div>
+	[honeypot honeypot-561]
+	<div class="row">
+		<div class="col-2 col-hide"></div>
+		<div class="col-12"><p class=theme-after-application>[acceptance cf7-reglam-personal-data][/acceptance] Даю согласие на обработку персональных данных Организатором Конкурса</p>
+	<p class=theme-after-application>[acceptance cf7-copyright][/acceptance] Даю согласие на публикацию конкурсной работы. Срок размещения работ: бессрочно. Подтверждаю, что выполненная мною/представляемым лицом работа не нарушает авторские права третьих лиц.</p>
+	<p class=theme-after-application>Правила предоставления Участниками Конкурса согласия на обработку персональных данных и Правила о соблюдении авторских прав при подготовке конкурсных работ и иные условия проведения Конкурса можно найти в разделе "Правила"</p></div>
+		<div class="col-2 col-hide"></div>
+	</div>
+	
+	<div class="row">
+		<div class="col-12">
+			[submit "Отправить"]
+		</div>
+	</div>
+</div>

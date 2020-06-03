@@ -1,0 +1,508 @@
+/*Дополнительные стили для темы*/
+body {
+  margin: 0;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  animation-name: fade;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-out {
+  -webkit-animation-name: fade-out;
+  animation-name: fade-out;
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+}
+
+@-webkit-keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0.1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0.1;
+  }
+}
+
+.bg-img {
+  position: fixed;
+  left: 0;
+  height: 0;
+  top: -120px;
+  z-index: -1;
+}
+
+.bg-img img {
+  width: 100%;
+  height: auto;
+}
+
+.main-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 36px;
+  color: #1a1635;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  padding: 20px 0;
+}
+
+.tabs {
+  padding-top: 15px;
+  position: relative;
+  text-align: center;
+  margin: 25px;
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  height: auto;
+}
+
+.tabs-menu, .tnp-submit {
+  display: inline-block;
+  float: center;
+  background-color: #1a1635;
+  color: #fff;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 0px 5px;
+  border: 1px solid #8980ca;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+}
+
+.tabs li.active-style {
+  background-color: #8980ca;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.tabs-overflow {
+  background-color: #fff;
+  margin: 10px 20px 50px 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 1px solid #000000;
+  padding: 20px 50px;
+}
+
+.tabs-overflow h2 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.tabs-overflow h2 .reglam-span {
+  text-align: left;
+}
+
+.tabs-overflow .reglam-block {
+  padding-top: 20px;
+}
+
+.tabs-overflow h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: left;
+  padding: 5px 0;
+}
+
+.tabs-overflow p,
+.tabs-overflow li,
+.tabs-overflow ul {
+  text-align: justify;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+}
+
+.tabs-overflow p {
+  text-indent: 1.5em;
+}
+
+.tabs-overflow .m0 {
+  margin: 8px 0;
+}
+
+.tabs-overflow .nomination-title {
+  font-weight: 600;
+  text-shadow: 1px 1px 0px #8980ca;
+  font-style: italic;
+}
+
+.tabs-overflow .nomination-namefile-title {
+  font-weight: 600;
+}
+
+.tabs-overflow .nomination-namefile-example {
+  background-color: #dddaf0;
+  padding: 5px;
+  /*border: 1px solid darken(@c1, 50%);*/
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.tabs-overflow .theme-title {
+  background-color: #dddaf0;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 50px;
+}
+
+.tabs-overflow .theme-after {
+  font-size: 14px;
+  margin: 0 50px 10px 50px;
+}
+
+.tabs-overflow .theme-after-application p {
+  text-indent: 0;
+  font-size: 14px;
+  margin: 0 50px 10px 50px;
+}
+
+.tabs-overflow .jury-img {
+  width: 100%;
+  box-shadow: 0 0 5px #1a1635;
+  max-width: 250px;
+}
+
+.tabs-overflow .check-reglam {
+  text-align: left;
+}
+
+.tabs-overflow .check-reglam input,
+.tabs-overflow .check-reglam label {
+  display: inline-block;
+}
+
+.tabs-overflow .order {
+  text-align: left;
+}
+
+.tabs-overflow .reglam-header,
+.tabs-overflow .position-header {
+  cursor: pointer;
+  padding-bottom: 20px;
+  text-indent: 1.5em;
+  text-align: left;
+}
+
+.tabs-overflow .reglam-header span,
+.tabs-overflow .position-header span {
+  border-bottom: 1px dotted #1a1635;
+}
+
+.tabs__content {
+  display: none;
+  /* по умолчанию прячем все блоки */
+}
+
+.tabs__content.active {
+  display: block;
+  /* по умолчанию показываем нужный блок */
+  justify-content: center;
+  height: 100%;
+}
+
+.p0 {
+  padding: 0;
+}
+
+p.title-row {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  padding: 5px 0;
+  text-indent: 0em;
+  margin: 0 0 0 0;
+}
+
+p.subtitle-row {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  text-align: left;
+  text-indent: 0em;
+  color: #888888;
+  margin: 0;
+}
+
+.required-field {
+  color: red;
+}
+
+.sub-title {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: left;
+  padding: 30px;
+  color: #555;
+}
+
+.value-row {
+  text-align: left;
+  padding: 5px 0;
+}
+
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"],
+.wpcf7 input[type="tel"],
+.wpcf7 textarea,
+.wpcf7 select {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #1a1635;
+  border-radius: 15px;
+  height: 30px;
+  padding: 0 10px;
+  width: 100%;
+  outline: none;
+}
+
+.wpcf7 textarea {
+  height: 100px;
+  padding: 10px;
+}
+
+.col-hide {
+  display: block;
+}
+
+.col-md-hide {
+  display: none;
+}
+
+.col-md-unhide {
+  display: block;
+}
+
+span.wpcf7-form-control-wrap.copyright label,
+span.wpcf7-list-item label {
+  margin: 0;
+  padding: 0;
+}
+
+.popup-app,
+.popup-app-dip,
+.popup-app-list {
+  z-index: 999999;
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(26, 22, 53, 0.8);
+}
+
+.popup-close {
+  position: absolute;
+  z-index: 999999;
+  top: 20px;
+  right: 13%;
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  background: transparent;
+  color: #1a1635;
+  border: none;
+}
+
+.popup-close:hover {
+  background: none;
+}
+
+.popup-content {
+  overflow: auto;
+  position: absolute;
+  text-align: center;
+  width: 80%;
+  left: 50%;
+  top: 20px;
+  bottom: 20px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  transform: translateX(-50%) !important;
+  padding: 10px;
+}
+
+a.link-button {
+  text-decoration: none;
+  margin-left: 50px;
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+a.link-button:hover, .tnp-widget input.tnp-submit:hover {
+  text-shadow: 0 0 10px white;
+}
+
+.tnp-widget input[type="text"], .tnp-widget input[type="email"], .tnp-widget input[type="submit"] {
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+.tnp-widget input.tnp-submit {
+  display: inline-block;
+  float: center;
+  background-color: #1a1635  !important;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 0px 5px;
+  border: 1px solid #8980ca;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  color: #ffffff !important;
+  font-weight: 600;
+  width: auto;
+  height: 100%;
+  align-self: 
+}
+
+.tnp-field-button {
+  text-align: right;
+}
+
+
+
+@media (max-width: 1200px) {
+  .col-hide {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .col-md-hide {
+    display: inline-block;
+  }
+
+  .col-md-unhide {
+    display: none;
+  }
+
+  .app-status {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    color: #1a1635;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .tabs {
+    margin: 0;
+  }
+
+  .tabs-menu {
+    font-size: 12px;
+  }
+
+  .tabs-overflow {
+    margin: 5px 5px 20px;
+    padding: 10px 20px;
+  }
+
+  .tabs-overflow h2 {
+    font-size: 16px;
+  }
+
+  .tabs-overflow h3 {
+    font-size: 14px;
+    padding: 5px 0;
+  }
+
+  .tabs-overflow p,
+  .tabs-overflow li,
+  .tabs-overflow ul {
+    font-size: 14px;
+  }
+
+  .tabs-overflow p {
+    text-indent: 1em;
+  }
+
+  .tabs-overflow .nomination-namefile-title {
+    font-weight: 600;
+  }
+
+  .tabs-overflow .nomination-namefile-example {
+    background-color: #fff;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .tabs-overflow .theme-title {
+    padding: 2px;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 5px;
+  }
+
+  .tabs-overflow .theme-after {
+    font-size: 12px;
+    margin: 0 0 10px;
+  }
+
+  .tabs__caption {
+    margin-bottom: 10px;
+  }
+}
+
+
+

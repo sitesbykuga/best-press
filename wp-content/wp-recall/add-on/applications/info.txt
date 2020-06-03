@@ -1,0 +1,5 @@
+Name: Подача заявки;
+Version: 1.0;
+Description: Дополнение для Wp-Recall;
+Support Core: 10.0.0;
+Author: Кугаевская Евгения;
